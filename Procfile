@@ -1,1 +1,1 @@
-web: bin/hugoiman
+web: bin/cv
