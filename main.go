@@ -13,8 +13,9 @@ func main() {
 		http.StripPrefix("/assets/",
 			http.FileServer(http.Dir("assets"))))
 	http.HandleFunc("/", Index)
-	fmt.Println("server started at localhost:5000")
+	fmt.Println("server started")
 	http.ListenAndServe(":"+os.Getenv("PORT"), nil)
+	// http.ListenAndServe(":5000", nil)
 }
 
 func Index(w http.ResponseWriter, r *http.Request) {
