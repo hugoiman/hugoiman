@@ -7,7 +7,7 @@ COPY . .
 RUN apk add --no-cache ca-certificates git
 RUN go mod download
 
-WORKDIR /go/src/build_cv
+WORKDIR /go/src/build_cv/cmd
 RUN GOOS=linux GOARCH=amd64 go build -o cv
 
 EXPOSE 5000

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
-	"os"
+	// "os"
 	"path"
 )
 
@@ -14,8 +14,8 @@ func main() {
 			http.FileServer(http.Dir("assets"))))
 	http.HandleFunc("/", Index)
 	fmt.Println("server started")
-	http.ListenAndServe(":"+os.Getenv("PORT"), nil)
-	// http.ListenAndServe(":5000", nil)
+	// http.ListenAndServe(":"+os.Getenv("PORT"), nil)
+	http.ListenAndServe(":5000", nil)
 }
 
 func Index(w http.ResponseWriter, r *http.Request) {
