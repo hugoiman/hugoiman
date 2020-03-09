@@ -14,5 +14,4 @@ EXPOSE 5000
 
 RUN mv cv ../../../../app/
 RUN rm -rf /../../../../build_cv
-
 ENTRYPOINT ["/app/cv"]
